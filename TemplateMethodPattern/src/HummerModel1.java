@@ -20,5 +20,11 @@ public class HummerModel1 extends HummerModel {
 	protected void enginBoom() {
 		System.out.println("h1的引擎声音");
 	}
+	
 
+	@Override
+	protected boolean isAlarm() {
+		return false;
+	}
+	
 }

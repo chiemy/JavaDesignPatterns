@@ -9,7 +9,13 @@ public abstract class HummerModel {
 	public final void run(){
 		this.start();
 		this.enginBoom();
-		this.alarm();
+		if(this.isAlarm()){
+			this.alarm();
+		}
 		this.stop();
+	}
+	// 钩子方法
+	protected boolean isAlarm(){
+		return true;
 	}
 }
