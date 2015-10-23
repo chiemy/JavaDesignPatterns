@@ -10,7 +10,7 @@ public abstract class CarModel {
 
 	protected abstract void alarm();
 
-	protected abstract void enginBoom();
+	protected abstract void engineBoom();
 
 	// 模板方法
 	public final void run() {
@@ -20,8 +20,8 @@ public abstract class CarModel {
 				String type = sequence.get(i);
 				if (type.equalsIgnoreCase("start")) {
 					this.start();
-				} else if (type.equalsIgnoreCase("enginBoom")) {
-					this.enginBoom();
+				} else if (type.equalsIgnoreCase("engineBoom")) {
+					this.engineBoom();
 				} else if (type.equalsIgnoreCase("alarm")) {
 					this.alarm();
 				} else if (type.equalsIgnoreCase("stop")) {
@@ -30,7 +30,7 @@ public abstract class CarModel {
 			}
 		} else {
 			this.start();
-			this.enginBoom();
+			this.engineBoom();
 			this.alarm();
 			this.stop();
 		}

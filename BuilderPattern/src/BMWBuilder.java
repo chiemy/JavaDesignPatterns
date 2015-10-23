@@ -1,11 +1,11 @@
 import java.util.List;
 
 
-public class BWMBuilder extends CarBuilder {
-	private BWMModel bwm;
+public class BMWBuilder extends CarBuilder {
+	private BMWModel bwm;
 	
-	public BWMBuilder(){
-		bwm = new BWMModel();
+	public BMWBuilder(){
+		bwm = new BMWModel();
 	}
 	
 	@Override
@@ -14,7 +14,7 @@ public class BWMBuilder extends CarBuilder {
 	}
 
 	@Override
-	public BWMModel getCardModel() {
+	public BMWModel getCardModel() {
 		return bwm;
 	}
 

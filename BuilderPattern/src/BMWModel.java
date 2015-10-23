@@ -1,5 +1,5 @@
 
-public class BWMModel extends CarModel {
+public class BMWModel extends CarModel {
 
 	@Override
 	protected void start() {
@@ -17,7 +17,7 @@ public class BWMModel extends CarModel {
 	}
 
 	@Override
-	protected void enginBoom() {
+	protected void engineBoom() {
 		System.out.println("奔驰 enginBoom");
 	}
 

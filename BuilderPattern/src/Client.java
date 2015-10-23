@@ -17,7 +17,7 @@ public class Client {
 		CarModel benz = builder1.getCardModel();
 		benz.run();
 		
-		CarBuilder builder2 = new BWMBuilder();
+		CarBuilder builder2 = new BMWBuilder();
 		List<String> sequence2 = new ArrayList<String>();
 		sequence2.add("start");
 		sequence2.add("enginBoom");
@@ -25,6 +25,22 @@ public class Client {
 		builder2.setSequence(sequence2);
 		CarModel bwm = builder2.getCardModel();
 		bwm.run();
+		System.out.println(">>>>导演<<<<");
+		/**
+		 * 导演类
+		 */
+		Director director = new Director();
+		BenzModel benzModelA = director.getABenzModel();
+		benzModelA.run();
+		
+		BenzModel benzModelB = director.getBBenzModel();
+		benzModelB.run();
+		
+		BMWModel bmwModelA = director.getABMWModel();
+		bmwModelA.run();
+		
+		BMWModel bmwModelB = director.getBBMWModel();
+		bmwModelB.run();
 	}
 
 }

@@ -17,7 +17,7 @@ public class BenzModel extends CarModel {
 	}
 
 	@Override
-	protected void enginBoom() {
+	protected void engineBoom() {
 		System.out.println("宝马 enginBoom");
 	}
 
