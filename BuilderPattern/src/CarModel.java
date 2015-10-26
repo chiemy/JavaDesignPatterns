@@ -1,5 +1,6 @@
 import java.util.List;
 
+
 public abstract class CarModel {
 	private List<String> sequence;
 
