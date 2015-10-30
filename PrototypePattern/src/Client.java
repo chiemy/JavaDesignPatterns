@@ -10,9 +10,10 @@ public class Client {
 		Mail mail = new Mail(new AdvTemplate());
 		mail.setTail("xx网上商城");
 		for (int i = 0; i < MAIL_COUNT; i++) {
-			mail.setAppellation(getRandomString(5) + "先生/女士");
-			mail.setReceiver(getRandomString(5) + "@" + getRandomString(3) + ".com");
-			sendMail(mail);
+			Mail cloneMail = mail.clone();
+			cloneMail.setAppellation(getRandomString(5) + "先生/女士");
+			cloneMail.setReceiver(getRandomString(5) + "@" + getRandomString(3) + ".com");
+			sendMail(cloneMail);
 		}
 	}
 	

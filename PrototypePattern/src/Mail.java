@@ -3,7 +3,7 @@
  * @author chiemy
  *
  */
-public class Mail {
+public class Mail implements Cloneable{
 	// 接收者
 	private String receiver;
 	// 邮件主题
@@ -51,6 +51,17 @@ public class Mail {
 	}
 	public void setTail(String tail) {
 		this.tail = tail;
+	}
+	
+	@Override
+	protected Mail clone() {
+		Mail mail = null;
+		try {
+			mail = (Mail) super.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO: handle exception
+		}
+		return mail;
 	}
 	
 }
