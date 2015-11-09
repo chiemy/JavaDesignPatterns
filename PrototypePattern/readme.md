@@ -8,4 +8,4 @@
 
 ![](prototype03.png)
 
-##更多见：[原型模式Prototype Pattern学习笔记]()
+##更多见：[原型模式Prototype Pattern学习笔记](http://chiemy.com/java/prototype-pattern/)
