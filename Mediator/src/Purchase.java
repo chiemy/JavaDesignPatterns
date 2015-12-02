@@ -3,21 +3,16 @@
  * @author chiemy
  *
  */
-public class Purchase {
+public class Purchase extends AbstractColleague{
+	public Purchase(AbstractMediator mediator) {
+		super(mediator);
+	}
 	/**
 	 * 采购IBM电脑
 	 * @param number
 	 */
 	public void buyIBMComputer(int number){
-		Stock stock = new Stock();
-		Sale sale = new Sale();
-		if(sale.getSellStatus() > 80){
-			System.out.println("采购IBM电脑:" + number);
-			stock.increase(number);
-		}else {
-			System.out.println("折半采购IBM电脑:" + number/2);
-			stock.increase(number / 2);
-		}
+		this.mediator.execute("purchase.buy", number);
 	}
 	/**
 	 * 不再采购IBM电脑

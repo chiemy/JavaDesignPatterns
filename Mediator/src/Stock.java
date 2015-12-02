@@ -3,7 +3,10 @@
  * @author chiemy
  *
  */
-public class Stock {
+public class Stock extends AbstractColleague{
+	public Stock(AbstractMediator mediator) {
+		super(mediator);
+	}
 	// 库存原有100台电脑
 	private static int COMPUTER_NUMBER = 100;
 	
@@ -34,11 +37,8 @@ public class Stock {
 	 * 库存压力较大
 	 */
 	public void clearStock(){
-		Purchase purchase = new Purchase();
-		Sale sale = new Sale();
-		System.out.println("清理库存数量为:" + COMPUTER_NUMBER);
-		sale.offSale();
-		purchase.refuseBuyIBM();
+		System.out.println("清理库存数量为:" +COMPUTER_NUMBER);
+		super.mediator.execute("stock.clear");
 	}
 	
 }
