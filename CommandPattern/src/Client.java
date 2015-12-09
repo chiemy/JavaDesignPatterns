@@ -9,6 +9,10 @@ public class Client {
 		group.find();
 		group.add();
 		group.plan();
+		
+		Invoker invoker = new Invoker();
+		invoker.setCommand(new DeletePageCommand());
+		invoker.action();
 	}
 
 }
